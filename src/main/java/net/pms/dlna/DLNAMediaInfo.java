@@ -1476,6 +1476,13 @@ public class DLNAMediaInfo implements Cloneable {
 				case FormatConfiguration.RA:
 					mimeType = HTTPResource.AUDIO_RA_TYPEMIME;
 					break;
+				case FormatConfiguration.RM:
+					if (isAudio()) {
+						mimeType = HTTPResource.AUDIO_RA_TYPEMIME;
+					} else {
+						mimeType = HTTPResource.RM_TYPEMIME;
+					}
+					break;
 				case FormatConfiguration.SHORTEN:
 					mimeType = HTTPResource.AUDIO_SHN_TYPEMIME;
 					break;
